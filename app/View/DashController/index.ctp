@@ -1,4 +1,3 @@
-
 <!-- Navigation -->
 <nav id="mainnav">
 	<ul> 
@@ -19,6 +18,9 @@
         <?php } ?>
         <?php if ($is_super == 1) { ?>
         <li class="bounce fadein floatright"> <a href="./tsettings"> <span class="icon settings"></span><?php echo __(' Settings ') ?></a> </li>
+        <?php } ?>
+        <?php if (($user_perm['pages'] & $glob_perm['pages']['server']) || ($user_perm['is_super'] == 1)) { ?>
+        <li class="bounce fadein"> <a href="./tservers"> <span class="icon server"></span><?php echo __(' HawkEye ') ?></a> </li>
         <?php } ?>
 	</ul>
 </nav>
